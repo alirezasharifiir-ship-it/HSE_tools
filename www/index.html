@@ -2118,7 +2118,7 @@
       if (err.name==='NotAllowedError') msg = 'لطفاً اجازهٔ دسترسی به میکروفون را بدهید.';
       else if (err.name==='NotFoundError') msg = 'میکروفونی پیدا نشد.';
       else if (window.location.protocol==='file:') msg = 'لطفاً صفحه را از طریق یک سرور محلی باز کنید.';
-      alert(msg);
+      alert(msg + '\n\n[جزئیات فنی برای عیب‌یابی]\nname: ' + (err && err.name) + '\nmessage: ' + (err && err.message) + '\nprotocol: ' + window.location.protocol);
       console.error('Mic error:', err);
       resetAll();
     }
